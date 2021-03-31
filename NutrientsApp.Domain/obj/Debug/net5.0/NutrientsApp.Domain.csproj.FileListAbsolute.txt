@@ -1,0 +1,17 @@
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Domain.deps.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Domain.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\ref\NutrientsApp.Domain.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Domain.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Data.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Entities.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Data.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Entities.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.csprojAssemblyReference.cache
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.AssemblyInfoInputs.cache
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.AssemblyInfo.cs
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.csproj.CopyComplete
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\ref\NutrientsApp.Domain.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.pdb

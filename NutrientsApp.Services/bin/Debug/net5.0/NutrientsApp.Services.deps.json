@@ -1,0 +1,80 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "NutrientsApp.Services/1.0.0": {
+        "dependencies": {
+          "NutrientsApp.Data": "1.0.0",
+          "NutrientsApp.Domain": "1.0.0",
+          "NutrientsApp.Entities": "1.0.0",
+          "NutrientsApp.Mappers": "1.0.0"
+        },
+        "runtime": {
+          "NutrientsApp.Services.dll": {}
+        }
+      },
+      "NutrientsApp.Data/1.0.0": {
+        "dependencies": {
+          "NutrientsApp.Entities": "1.0.0"
+        },
+        "runtime": {
+          "NutrientsApp.Data.dll": {}
+        }
+      },
+      "NutrientsApp.Domain/1.0.0": {
+        "dependencies": {
+          "NutrientsApp.Data": "1.0.0"
+        },
+        "runtime": {
+          "NutrientsApp.Domain.dll": {}
+        }
+      },
+      "NutrientsApp.Entities/1.0.0": {
+        "runtime": {
+          "NutrientsApp.Entities.dll": {}
+        }
+      },
+      "NutrientsApp.Mappers/1.0.0": {
+        "dependencies": {
+          "NutrientsApp.Data": "1.0.0",
+          "NutrientsApp.Domain": "1.0.0",
+          "NutrientsApp.Entities": "1.0.0"
+        },
+        "runtime": {
+          "NutrientsApp.Mappers.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NutrientsApp.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NutrientsApp.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NutrientsApp.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NutrientsApp.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NutrientsApp.Mappers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

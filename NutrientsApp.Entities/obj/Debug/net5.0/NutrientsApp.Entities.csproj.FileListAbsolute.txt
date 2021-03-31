@@ -1,0 +1,12 @@
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\bin\Debug\net5.0\NutrientsApp.Entities.deps.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\bin\Debug\net5.0\NutrientsApp.Entities.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\bin\Debug\net5.0\ref\NutrientsApp.Entities.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\bin\Debug\net5.0\NutrientsApp.Entities.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\NutrientsApp.Entities.csprojAssemblyReference.cache
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\NutrientsApp.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\NutrientsApp.Entities.AssemblyInfoInputs.cache
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\NutrientsApp.Entities.AssemblyInfo.cs
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\NutrientsApp.Entities.csproj.CoreCompileInputs.cache
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\NutrientsApp.Entities.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\ref\NutrientsApp.Entities.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\NutrientsApp.Entities.pdb

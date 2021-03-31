@@ -1,0 +1,108 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "NutrientsApp.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "NutrientsApp.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/NutrientsApp.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NutrientsApp.Data.dll": {}
+        }
+      },
+      "NutrientsApp.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/NutrientsApp.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NutrientsApp.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NutrientsApp.Data/1.0.0": {
+      "type": "project",
+      "path": "../NutrientsApp.Data/NutrientsApp.Data.csproj",
+      "msbuildProject": "../NutrientsApp.Data/NutrientsApp.Data.csproj"
+    },
+    "NutrientsApp.Entities/1.0.0": {
+      "type": "project",
+      "path": "../NutrientsApp.Entities/NutrientsApp.Entities.csproj",
+      "msbuildProject": "../NutrientsApp.Entities/NutrientsApp.Entities.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "NutrientsApp.Data >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ozonp\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj",
+      "projectName": "NutrientsApp.Domain",
+      "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj",
+      "packagesPath": "C:\\Users\\ozonp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\ozonp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data\\NutrientsApp.Data.csproj": {
+              "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data\\NutrientsApp.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

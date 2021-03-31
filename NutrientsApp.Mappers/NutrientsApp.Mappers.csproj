@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NutrientsApp.Data\NutrientsApp.Data.csproj" />
+      <ProjectReference Include="..\NutrientsApp.Domain\NutrientsApp.Domain.csproj" />
+      <ProjectReference Include="..\NutrientsApp.Entities\NutrientsApp.Entities.csproj" />
+    </ItemGroup>
+
+</Project>

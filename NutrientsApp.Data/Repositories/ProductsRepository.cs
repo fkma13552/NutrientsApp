@@ -8,8 +8,7 @@ namespace NutrientsApp.Data.Repositories
 {
     public class ProductsRepository : IProductsRepository<ProductEntity>
     {
-
-        public static IDictionary<Guid, ProductEntity> _productData;
+        private static IDictionary<Guid, ProductEntity> _productData;
 
         public ProductsRepository()
         {

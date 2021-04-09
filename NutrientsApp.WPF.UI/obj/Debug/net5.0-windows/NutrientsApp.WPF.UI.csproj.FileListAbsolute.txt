@@ -32,3 +32,11 @@ C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\bin\Debug\net5.0-w
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\bin\Debug\net5.0-windows\NutrientsApp.Mappers.pdb
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\obj\Debug\net5.0-windows\NutrientsApp.WPF.UI.csproj.CopyComplete
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\bin\Debug\net5.0-windows\EntityFramework.SqlServer.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\bin\Debug\net5.0-windows\EntityFramework.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.WPF.UI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

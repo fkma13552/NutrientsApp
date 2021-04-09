@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NutrientsApp.Data.Repositories.Abstract;
+using NutrientsApp.Data.UnitOfWork.Abstract;
 using NutrientsApp.Domain;
 using NutrientsApp.Entities;
 using NutrientsApp.Services.Abstract;
@@ -11,44 +11,43 @@ namespace NutrientsApp.Services
 {
     public class RecipesService : IRecipesService
     {
-        private readonly IRecipesRepository<RecipeEntity, IngredientEntity> _recipesRepository;
-
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IProductsService _productsService;
         
-        public RecipesService(IRecipesRepository<RecipeEntity, IngredientEntity> recipesRepository, IProductsService productsService)
+        public RecipesService(IUnitOfWork unitOfWork)
         {
-            _recipesRepository = recipesRepository;
-            _productsService = productsService;
+            _unitOfWork = unitOfWork;
+            _productsService = new ProductsService(unitOfWork);
         }
 
         public void AddRecipe(Recipe recipe)
         {
-            _recipesRepository.Create(recipe.ToEntity());
+            _unitOfWork.RecipesRepository.Create(recipe.ToEntity());
         }
 
         public void DeleteRecipeById(Guid id)
         {
-            _recipesRepository.DeleteById(id);
+            _unitOfWork.RecipesRepository.DeleteById(id);
         }
 
         public IList<Recipe> GetAll()
         {
-            return _recipesRepository.GetAll().Select(r => r.ToDomain()).ToList();
+            return _unitOfWork.RecipesRepository.GetAll().Select(r => r.ToDomain()).ToList();
         }
 
         public Recipe GetRecipeById(Guid id)
         {
-            return _recipesRepository.GetById(id).ToDomain();
+            return _unitOfWork.RecipesRepository.GetById(id).ToDomain();
         }
 
         public void UpdateRecipe(Recipe recipe)
         {
-            _recipesRepository.Update(recipe.ToEntity());
+            _unitOfWork.RecipesRepository.Update(recipe.ToEntity());
         }
 
         public int GetRecipeProteins(Recipe recipe)
         {
-            IList<IngredientEntity> ing = _recipesRepository.GetIngredients(recipe.ToEntity());
+            IList<IngredientEntity> ing = _unitOfWork.RecipesRepository.GetIngredients(recipe.ToEntity());
             int p = 0;
             foreach (var entity in ing)
             {
@@ -60,7 +59,7 @@ namespace NutrientsApp.Services
 
         public int GetRecipeCarbohydrates(Recipe recipe)
         {
-            IList<IngredientEntity> ing = _recipesRepository.GetIngredients(recipe.ToEntity());
+            IList<IngredientEntity> ing = _unitOfWork.RecipesRepository.GetIngredients(recipe.ToEntity());
             int c = 0;
             foreach (var entity in ing)
             {
@@ -72,7 +71,7 @@ namespace NutrientsApp.Services
 
         public int GetRecipeFats(Recipe recipe)
         {
-            IList<IngredientEntity> ing = _recipesRepository.GetIngredients(recipe.ToEntity());
+            IList<IngredientEntity> ing = _unitOfWork.RecipesRepository.GetIngredients(recipe.ToEntity());
             int f = 0;
             foreach (var entity in ing)
             {
@@ -84,7 +83,7 @@ namespace NutrientsApp.Services
 
         public int GetRecipeVitamins(Recipe recipe)
         {
-            IList<IngredientEntity> ing = _recipesRepository.GetIngredients(recipe.ToEntity());
+            IList<IngredientEntity> ing = _unitOfWork.RecipesRepository.GetIngredients(recipe.ToEntity());
             int v = 0;
             foreach (var entity in ing)
             {
@@ -96,7 +95,7 @@ namespace NutrientsApp.Services
 
         public int GetRecipeMinerals(Recipe recipe)
         {
-            IList<IngredientEntity> ing = _recipesRepository.GetIngredients(recipe.ToEntity());
+            IList<IngredientEntity> ing = _unitOfWork.RecipesRepository.GetIngredients(recipe.ToEntity());
             int m = 0;
             foreach (var entity in ing)
             {

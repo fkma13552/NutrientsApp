@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using NutrientsApp.Data.Repositories;
+using NutrientsApp.Data;
+using NutrientsApp.Data.UnitOfWork;
+using NutrientsApp.Data.UnitOfWork.Abstract;
 using NutrientsApp.Services.Abstract;
 using NutrientsApp.Domain;
-using NutrientsApp.Entities;
 using NutrientsApp.Services;
 
 namespace NutrientsApp
@@ -12,9 +13,8 @@ namespace NutrientsApp
     {
         static void Main(string[] args)
         {
-            IRecipesService recipesService = 
-                new RecipesService(new RecipesRepository<IngredientEntity>(new IngredientsRepository(),
-                    new ProductsRepository()), new ProductsService(new ProductsRepository()));
+            IUnitOfWork unitOfWork = new UnitOfWork(new NutrientsContext());
+            IRecipesService recipesService = new RecipesService(unitOfWork);
 
             IList<Recipe> choiceList = new List<Recipe>();
             IList<Recipe> recipesList = recipesService.GetAll();

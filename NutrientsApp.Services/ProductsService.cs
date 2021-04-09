@@ -2,6 +2,7 @@
 using NutrientsApp.Domain;
 using NutrientsApp.Services.Abstract;
 using NutrientsApp.Data.Repositories.Abstract;
+using NutrientsApp.Data.UnitOfWork.Abstract;
 using NutrientsApp.Entities;
 using NutrientsApp.Mappers;
 
@@ -9,30 +10,30 @@ namespace NutrientsApp.Services
 {
     public class ProductsService : IProductsService
     {
-        private readonly IProductsRepository<ProductEntity> _productsRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ProductsService(IProductsRepository<ProductEntity> productsRepository)
+        public ProductsService(IUnitOfWork unitOfWork)
         {
-            _productsRepository = productsRepository;
+            _unitOfWork = unitOfWork;
         }
         public void AddProduct(Product product)
         {
-            _productsRepository.Create(product.ToEntity());
+            _unitOfWork.ProductsRepository.Create(product.ToEntity());
         }
 
         public void DeleteProductById(Guid id)
         {
-            _productsRepository.DeleteById(id);
+            _unitOfWork.ProductsRepository.DeleteById(id);
         }
 
         public Product GetProductById(Guid id)
         {
-            return _productsRepository.GetById(id).ToDomain();
+            return _unitOfWork.ProductsRepository.GetById(id).ToDomain();
         }
 
         public void UpdateProduct(Product product)
         {
-            _productsRepository.Update(product.ToEntity());
+            _unitOfWork.ProductsRepository.Update(product.ToEntity());
         }
     }
 }

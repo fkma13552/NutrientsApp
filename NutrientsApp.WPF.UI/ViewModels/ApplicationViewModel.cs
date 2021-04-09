@@ -2,7 +2,9 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using NutrientsApp.Data;
 using NutrientsApp.Data.Repositories;
+using NutrientsApp.Data.UnitOfWork;
 using NutrientsApp.Domain;
 using NutrientsApp.Entities;
 using NutrientsApp.Services;
@@ -13,20 +15,20 @@ namespace NutrientsApp.WPF.UI.ViewModels
 {
     public class ApplicationViewModel: INotifyPropertyChanged
     {
-        private IRecipesService recipesService;
+        private readonly IRecipesService _recipesService;
 
-        private Recipe selectedFromAllRecipe;
-        private Recipe selectedFromChosenRecipe;
+        private Recipe _selectedFromAllRecipe;
+        private Recipe _selectedFromChosenRecipe;
         
         public Recipe SelectedFromAllRecipe
         {
-            get { return selectedFromAllRecipe; }
-            set { selectedFromAllRecipe = value; OnPropertyChanged("SelectedFromAllRecipe"); }
+            get { return _selectedFromAllRecipe; }
+            set { _selectedFromAllRecipe = value; OnPropertyChanged("SelectedFromAllRecipe"); }
         }
         public Recipe SelectedFromChosenRecipe
         {
-            get { return selectedFromChosenRecipe; }
-            set { selectedFromChosenRecipe = value; OnPropertyChanged("SelectedFromChosenRecipe"); }
+            get { return _selectedFromChosenRecipe; }
+            set { _selectedFromChosenRecipe = value; OnPropertyChanged("SelectedFromChosenRecipe"); }
         }
         
         public ObservableCollection<Recipe> AllRecipes { get; set; }
@@ -41,7 +43,7 @@ namespace NutrientsApp.WPF.UI.ViewModels
             get
             {
                 return chooseRecipe ?? new RelayCommand(obj =>
-                    ChosenRecipes.Add(SelectedFromAllRecipe), obj => selectedFromAllRecipe != null);
+                    ChosenRecipes.Add(SelectedFromAllRecipe), obj => _selectedFromAllRecipe != null);
             }
         }
         public RelayCommand UnchooseRecipe
@@ -49,7 +51,7 @@ namespace NutrientsApp.WPF.UI.ViewModels
             get
             {
                 return unchooseRecipe ?? new RelayCommand(obj =>
-                    ChosenRecipes.Remove(SelectedFromChosenRecipe), obj => selectedFromChosenRecipe != null);
+                    ChosenRecipes.Remove(SelectedFromChosenRecipe), obj => _selectedFromChosenRecipe != null);
             }
         }
         public RelayCommand CountNutrientsFromRecipes
@@ -63,9 +65,9 @@ namespace NutrientsApp.WPF.UI.ViewModels
                     int f = 0;
                     foreach (var recipe in ChosenRecipes)
                     {
-                        p += recipesService.GetRecipeProteins(recipe);
-                        c += recipesService.GetRecipeCarbohydrates(recipe);
-                        f += recipesService.GetRecipeFats(recipe);
+                        p += _recipesService.GetRecipeProteins(recipe);
+                        c += _recipesService.GetRecipeCarbohydrates(recipe);
+                        f += _recipesService.GetRecipeFats(recipe);
                     }
                     MessageBox.Show(
                         $"Your day will contain {p} proteins, {c} carbohydrates and {f} fats. Have a nice day!");
@@ -77,9 +79,8 @@ namespace NutrientsApp.WPF.UI.ViewModels
 
         public ApplicationViewModel()
         {
-            recipesService = new RecipesService(new RecipesRepository<IngredientEntity>(
-                new IngredientsRepository(), new ProductsRepository()), new ProductsService(new ProductsRepository()));
-            AllRecipes = new ObservableCollection<Recipe>(recipesService.GetAll());
+            _recipesService = new RecipesService(new UnitOfWork(new NutrientsContext()));
+            AllRecipes = new ObservableCollection<Recipe>(_recipesService.GetAll());
             ChosenRecipes = new ObservableCollection<Recipe>();
         }
 

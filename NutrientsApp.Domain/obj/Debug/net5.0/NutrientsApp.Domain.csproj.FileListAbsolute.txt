@@ -15,6 +15,3 @@ C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\N
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\ref\NutrientsApp.Domain.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.pdb
-C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Domain.runtimeconfig.json
-C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Domain.runtimeconfig.dev.json
-C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.genruntimeconfig.cache

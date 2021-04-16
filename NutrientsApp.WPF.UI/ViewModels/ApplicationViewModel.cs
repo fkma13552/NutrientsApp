@@ -5,6 +5,7 @@ using System.Windows;
 using NutrientsApp.Data;
 using NutrientsApp.Data.Repositories;
 using NutrientsApp.Data.UnitOfWork;
+using NutrientsApp.Data.UnitOfWork.Abstract;
 using NutrientsApp.Domain;
 using NutrientsApp.Entities;
 using NutrientsApp.Services;
@@ -77,9 +78,9 @@ namespace NutrientsApp.WPF.UI.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ApplicationViewModel()
+        public ApplicationViewModel(IRecipesService recipesService)
         {
-            _recipesService = new RecipesService(new UnitOfWork(new NutrientsContext()));
+            _recipesService = recipesService;
             AllRecipes = new ObservableCollection<Recipe>(_recipesService.GetAll());
             ChosenRecipes = new ObservableCollection<Recipe>();
         }

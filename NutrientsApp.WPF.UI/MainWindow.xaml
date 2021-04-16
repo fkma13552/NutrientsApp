@@ -8,8 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="600">
     
-<Window.DataContext><vm:ApplicationViewModel></vm:ApplicationViewModel></Window.DataContext>
-    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>

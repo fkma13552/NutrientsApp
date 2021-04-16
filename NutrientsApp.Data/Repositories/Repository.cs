@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using NutrientsApp.Data.Repositories.Abstract;
 using NutrientsApp.Entities.Abstract;
 

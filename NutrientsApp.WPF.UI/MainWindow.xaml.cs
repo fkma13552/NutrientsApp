@@ -8,9 +8,10 @@ namespace NutrientsApp.WPF.UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(ApplicationViewModel applicationViewModel)
         {
             InitializeComponent();
+            DataContext = applicationViewModel;
         }
     }
 }

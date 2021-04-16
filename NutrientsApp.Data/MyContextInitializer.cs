@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Data.Entity;
 using NutrientsApp.Entities;
 
 namespace NutrientsApp.Data
 {
-    public class MyContextInitializer : DropCreateDatabaseAlways<NutrientsContext>
+    public class MyContextInitializer
     {
-        protected override void Seed(NutrientsContext context)
+        protected void Seed(NutrientsContext context)
         {
             //Recipes
             RecipeEntity salad = new RecipeEntity

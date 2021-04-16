@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using NutrientsApp.Data;
-using NutrientsApp.Data.UnitOfWork;
-using NutrientsApp.Data.UnitOfWork.Abstract;
-using NutrientsApp.Services.Abstract;
 using NutrientsApp.Domain;
-using NutrientsApp.Services;
+using NutrientsApp.Entities;
 
 namespace NutrientsApp
 {
@@ -13,10 +13,18 @@ namespace NutrientsApp
     {
         static void Main(string[] args)
         {
-            IUnitOfWork unitOfWork = new UnitOfWork(new NutrientsContext());
-            IRecipesService recipesService = new RecipesService(unitOfWork);
+            var builder = new ConfigurationBuilder();
+            builder.SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", false, true);
+            var config = builder.Build();
+            
+            string connectionString = config.GetConnectionString("NutrientsDb");
+            var optionsBuilder = new DbContextOptionsBuilder<NutrientsContext>();
 
-            IList<Recipe> choiceList = new List<Recipe>();
+            var options = optionsBuilder.UseSqlServer(connectionString).Options;
+            
+            
+            /*IList<Recipe> choiceList = new List<Recipe>();
             IList<Recipe> recipesList = recipesService.GetAll();
             
             //Userexp
@@ -77,7 +85,7 @@ namespace NutrientsApp
             }
 
             Console.WriteLine("our ration has: " + prot + "g proteins " + fats + "g fats " + carb +
-                "g carbohydrates " + vitm + "g vitamins " + minr + "g minerals ");
+                "g carbohydrates " + vitm + "g vitamins " + minr + "g minerals ");*/
         }
 
         //Hello My friend

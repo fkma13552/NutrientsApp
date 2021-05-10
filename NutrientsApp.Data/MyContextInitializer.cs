@@ -5,7 +5,7 @@ namespace NutrientsApp.Data
 {
     public class MyContextInitializer
     {
-        protected void Seed(NutrientsContext context)
+        protected void Seed(MyContext context)
         {
             //Recipes
             RecipeEntity salad = new RecipeEntity

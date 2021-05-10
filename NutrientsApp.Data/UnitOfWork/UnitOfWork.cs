@@ -10,9 +10,9 @@ namespace NutrientsApp.Data.UnitOfWork
         private IIngredientsRepository<IngredientEntity> _ingredientsRepository;
         private IRecipesRepository<RecipeEntity> _recipesRepository;
         private IProductsRepository<ProductEntity> _productsRepository;
-        private NutrientsContext _context;
+        private MyContext _context;
 
-        public UnitOfWork(NutrientsContext context)
+        public UnitOfWork(MyContext context)
         {
             _context = context;
         }

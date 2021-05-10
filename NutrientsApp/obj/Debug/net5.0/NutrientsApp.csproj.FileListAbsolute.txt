@@ -78,3 +78,9 @@ C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp\bin\Debug\net5.0\runtimes
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp\bin\Debug\net5.0\Humanizer.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp\bin\Debug\net5.0\dotnet-ef.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp\bin\Debug\net5.0\Newtonsoft.Json.dll

@@ -17,3 +17,6 @@ C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Mappers\obj\Debug\net5.0\
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Mappers\obj\Debug\net5.0\NutrientsApp.Mappers.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Mappers\obj\Debug\net5.0\ref\NutrientsApp.Mappers.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Mappers\obj\Debug\net5.0\NutrientsApp.Mappers.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Mappers\bin\Debug\net5.0\NutrientsApp.Mappers.runtimeconfig.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Mappers\bin\Debug\net5.0\NutrientsApp.Mappers.runtimeconfig.dev.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Mappers\obj\Debug\net5.0\NutrientsApp.Mappers.genruntimeconfig.cache

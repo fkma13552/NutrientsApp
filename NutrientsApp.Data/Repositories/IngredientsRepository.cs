@@ -9,8 +9,8 @@ namespace NutrientsApp.Data.Repositories
 {
     public class IngredientsRepository : Repository<IngredientEntity>, IIngredientsRepository<IngredientEntity>
     {
-        private NutrientsContext _context;
-        public IngredientsRepository(NutrientsContext context) : base(context)
+        private MyContext _context;
+        public IngredientsRepository(MyContext context) : base(context)
         {
             _context = context;
         }

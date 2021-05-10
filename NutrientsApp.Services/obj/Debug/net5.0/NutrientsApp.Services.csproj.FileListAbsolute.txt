@@ -19,3 +19,6 @@ C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\obj\Debug\net5.0
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\obj\Debug\net5.0\NutrientsApp.Services.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\obj\Debug\net5.0\ref\NutrientsApp.Services.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\obj\Debug\net5.0\NutrientsApp.Services.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Services.runtimeconfig.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Services.runtimeconfig.dev.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\obj\Debug\net5.0\NutrientsApp.Services.genruntimeconfig.cache

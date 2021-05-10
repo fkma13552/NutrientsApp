@@ -10,9 +10,9 @@ namespace NutrientsApp.Data.Repositories
     public class RecipesRepository : Repository<RecipeEntity>, IRecipesRepository<RecipeEntity>
     {
 
-        private NutrientsContext _context;
+        private MyContext _context;
 
-        public RecipesRepository(NutrientsContext context) : base(context)
+        public RecipesRepository(MyContext context) : base(context)
         {
             _context = context;
         }

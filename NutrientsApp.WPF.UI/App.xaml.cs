@@ -53,8 +53,9 @@ namespace NutrientsApp.WPF.UI
             services.AddTransient<IRecipesService, RecipesService>();
             services.AddTransient<IIngredientsService, IngredientService>();
             services.AddTransient<IProductsService, ProductsService>();
-            services.AddDbContext<NutrientsContext>(
-                options => options.UseSqlServer(Configuration.GetConnectionString("NutrientsDb")));
+            services.AddDbContext<MyContext>(
+                options => options.UseSqlServer(Configuration.GetConnectionString("NutrientsDb"), 
+                    x => x.MigrationsAssembly("NutrientsApp.Data")));
             services.AddTransient<ApplicationViewModel>();
         }
     }

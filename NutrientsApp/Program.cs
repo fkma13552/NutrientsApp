@@ -19,7 +19,7 @@ namespace NutrientsApp
             var config = builder.Build();
             
             string connectionString = config.GetConnectionString("NutrientsDb");
-            var optionsBuilder = new DbContextOptionsBuilder<NutrientsContext>();
+            var optionsBuilder = new DbContextOptionsBuilder<MyContext>();
 
             var options = optionsBuilder.UseSqlServer(connectionString).Options;
             

@@ -3,16 +3,16 @@ using NutrientsApp.Entities;
 
 namespace NutrientsApp.Data
 {
-    public class NutrientsContext : DbContext
+    public class MyContext : DbContext
     {
-        public NutrientsContext(DbContextOptions<NutrientsContext> options) : base(options)
+        public MyContext(DbContextOptions<MyContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            
         }
 
         public DbSet<IngredientEntity> Ingredients { get; set; }
         public DbSet<ProductEntity> Products { get; set; }
         public DbSet<RecipeEntity> Recipes { get; set; }
-        
+        public DbSet<NutrientComponentEntity> NutrientComponents { get; set; }
     }
 }

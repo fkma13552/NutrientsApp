@@ -9,10 +9,10 @@ namespace NutrientsApp.Data.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class, IBaseEntity
     {
-        private NutrientsContext _context;
-        private DbSet<T> _dbSet;
+        private readonly MyContext _context;
+        private readonly DbSet<T> _dbSet;
 
-        public Repository(NutrientsContext context)
+        public Repository(MyContext context)
         {
             _context = context;
             _dbSet = context.Set<T>();

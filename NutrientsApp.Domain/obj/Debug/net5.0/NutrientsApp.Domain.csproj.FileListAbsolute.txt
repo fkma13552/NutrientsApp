@@ -2,9 +2,7 @@ C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\N
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Domain.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\ref\NutrientsApp.Domain.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Domain.pdb
-C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Data.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Entities.dll
-C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Data.pdb
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Entities.pdb
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.csprojAssemblyReference.cache
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
@@ -15,3 +13,10 @@ C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\N
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\ref\NutrientsApp.Domain.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Domain.runtimeconfig.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Domain.runtimeconfig.dev.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\obj\Debug\net5.0\NutrientsApp.Domain.genruntimeconfig.cache
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Data.Abstract.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Data.ImplEf.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Data.ImplEf.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Domain\bin\Debug\net5.0\NutrientsApp.Data.Abstract.pdb

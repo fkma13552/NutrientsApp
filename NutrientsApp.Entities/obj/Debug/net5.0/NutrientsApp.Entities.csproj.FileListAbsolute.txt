@@ -10,3 +10,6 @@ C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\NutrientsApp.Entities.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\ref\NutrientsApp.Entities.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\NutrientsApp.Entities.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\bin\Debug\net5.0\NutrientsApp.Entities.runtimeconfig.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\bin\Debug\net5.0\NutrientsApp.Entities.runtimeconfig.dev.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Entities\obj\Debug\net5.0\NutrientsApp.Entities.genruntimeconfig.cache

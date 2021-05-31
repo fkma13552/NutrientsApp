@@ -13,7 +13,9 @@ namespace NutrientsApp.Mappers
                 Id = ingredient.Id,
                 RecipeId = ingredient.RecipeId,
                 ProductId = ingredient.ProductId,
-                AmountInGrams = ingredient.AmountInGrams
+                AmountInGrams = ingredient.AmountInGrams,
+                Recipe = ingredient.Recipe.ToEntity(),
+                Product = ingredient.Product.ToEntity()
             };
         }
 
@@ -24,7 +26,9 @@ namespace NutrientsApp.Mappers
                 Id = ingredientEntity.Id,
                 RecipeId = ingredientEntity.Id,
                 ProductId = ingredientEntity.ProductId,
-                AmountInGrams = ingredientEntity.AmountInGrams
+                AmountInGrams = ingredientEntity.AmountInGrams,
+                Recipe = ingredientEntity.Recipe.ToDomain(),
+                Product = ingredientEntity.Product.ToDomain()
             };
         }
     }

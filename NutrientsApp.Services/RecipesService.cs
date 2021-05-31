@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NutrientsApp.Data.UnitOfWork.Abstract;
+using NutrientsApp.Data.Abstract.UnitOfWork;
 using NutrientsApp.Domain;
 using NutrientsApp.Entities;
 using NutrientsApp.Services.Abstract;
@@ -12,12 +12,12 @@ namespace NutrientsApp.Services
     public class RecipesService : IRecipesService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IProductsService _productsService;
+        private readonly IProductNutrientsService _productNutrientsService;
         
         public RecipesService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _productsService = new ProductsService(unitOfWork);
+            _productNutrientsService = new ProductNutrientsService(unitOfWork);
         }
 
         public void AddRecipe(Recipe recipe)
@@ -35,6 +35,31 @@ namespace NutrientsApp.Services
             return _unitOfWork.RecipesRepository.GetAll().Select(r => r.ToDomain()).ToList();
         }
 
+        public IDictionary<string, int> GetRecipeNutrients(Recipe recipe)
+        {
+            IList<IngredientEntity> ingredients = _unitOfWork.IngredientsRepository.GetAllItemsFromRecipe(recipe.ToEntity());
+            IDictionary<string, int> dictionaryToReturn = new Dictionary<string, int>();
+            
+            foreach (IngredientEntity ingredient in ingredients)
+            {
+                IDictionary<string, int> nutrients = _productNutrientsService.GetProductNutrients(ingredient.ProductId);
+                foreach (KeyValuePair<string,int> kv in nutrients)
+                {
+                    if (dictionaryToReturn.ContainsKey(kv.Key))
+                    {
+                        dictionaryToReturn[kv.Key] += kv.Value * ingredient.AmountInGrams / 100;
+                    }
+                    else
+                    {
+                        dictionaryToReturn[kv.Key] = kv.Value * ingredient.AmountInGrams / 100;  
+                    }
+                    
+                }
+                
+            }
+            return dictionaryToReturn;
+        }
+
         public Recipe GetRecipeById(Guid id)
         {
             return _unitOfWork.RecipesRepository.GetById(id).ToDomain();
@@ -45,64 +70,6 @@ namespace NutrientsApp.Services
             _unitOfWork.RecipesRepository.Update(recipe.ToEntity());
         }
 
-        public int GetRecipeProteins(Recipe recipe)
-        {
-            IList<IngredientEntity> ing = _unitOfWork.RecipesRepository.GetIngredients(recipe.ToEntity());
-            int p = 0;
-            foreach (var entity in ing)
-            {
-                p += _productsService.GetProductById(entity.ProductId).Proteins * entity.AmountInGrams / 100;
-            }
-
-            return p;
-        }
-
-        public int GetRecipeCarbohydrates(Recipe recipe)
-        {
-            IList<IngredientEntity> ing = _unitOfWork.RecipesRepository.GetIngredients(recipe.ToEntity());
-            int c = 0;
-            foreach (var entity in ing)
-            {
-                c += _productsService.GetProductById(entity.ProductId).Carbohydrates * entity.AmountInGrams / 100;
-            }
-
-            return c;
-        }
-
-        public int GetRecipeFats(Recipe recipe)
-        {
-            IList<IngredientEntity> ing = _unitOfWork.RecipesRepository.GetIngredients(recipe.ToEntity());
-            int f = 0;
-            foreach (var entity in ing)
-            {
-                f += _productsService.GetProductById(entity.ProductId).Fats * entity.AmountInGrams / 100;
-            }
-
-            return f;
-        }
-
-        public int GetRecipeVitamins(Recipe recipe)
-        {
-            IList<IngredientEntity> ing = _unitOfWork.RecipesRepository.GetIngredients(recipe.ToEntity());
-            int v = 0;
-            foreach (var entity in ing)
-            {
-                v += _productsService.GetProductById(entity.ProductId).Vitamins * entity.AmountInGrams / 100;
-            }
-
-            return v;
-        }
-
-        public int GetRecipeMinerals(Recipe recipe)
-        {
-            IList<IngredientEntity> ing = _unitOfWork.RecipesRepository.GetIngredients(recipe.ToEntity());
-            int m = 0;
-            foreach (var entity in ing)
-            {
-                m += _productsService.GetProductById(entity.ProductId).Minerals * entity.AmountInGrams / 100;
-            }
-
-            return m;
-        }
+        
     }
 }

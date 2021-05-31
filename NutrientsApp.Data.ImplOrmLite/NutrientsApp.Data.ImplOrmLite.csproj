@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NutrientsApp.Data.Abstract\NutrientsApp.Data.Abstract.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="ServiceStack.OrmLite.SqlServer" Version="5.11.0" />
+    </ItemGroup>
+
+</Project>

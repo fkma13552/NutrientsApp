@@ -1,11 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
-using NutrientsApp.Data;
-using NutrientsApp.Data.Repositories;
-using NutrientsApp.Data.UnitOfWork;
-using NutrientsApp.Data.UnitOfWork.Abstract;
 using NutrientsApp.Domain;
 using NutrientsApp.Entities;
 using NutrientsApp.Services;
@@ -17,6 +14,8 @@ namespace NutrientsApp.WPF.UI.ViewModels
     public class ApplicationViewModel: INotifyPropertyChanged
     {
         private readonly IRecipesService _recipesService;
+        private readonly IProductNutrientsService _productNutrientsService;
+        private readonly INutrientComponentsService _nutrientComponentsService;
 
         private Recipe _selectedFromAllRecipe;
         private Recipe _selectedFromChosenRecipe;
@@ -61,15 +60,27 @@ namespace NutrientsApp.WPF.UI.ViewModels
             {
                 return countNutrientsFromRecipes ?? new RelayCommand(obj =>
                 {
-                    int p = 0;
-                    int c = 0;
-                    int f = 0;
+
+                    IDictionary<string, int> allNutrients = new Dictionary<string, int>();
                     foreach (var recipe in ChosenRecipes)
                     {
-                        p += _recipesService.GetRecipeProteins(recipe);
-                        c += _recipesService.GetRecipeCarbohydrates(recipe);
-                        f += _recipesService.GetRecipeFats(recipe);
+                        IDictionary<string, int> nutrients = _recipesService.GetRecipeNutrients(recipe);
+                        foreach (KeyValuePair<string, int> kv in nutrients)
+                        {
+                            if (allNutrients.ContainsKey(kv.Key))
+                            {
+                                allNutrients[kv.Key] += kv.Value;
+                            }
+                            else
+                            {
+                                allNutrients[kv.Key] = kv.Value;
+                            }
+                        }
                     }
+
+                    int p = allNutrients["Proteins"];
+                    int c = allNutrients["Carbohydrates"];
+                    int f = allNutrients["Fats"];
                     MessageBox.Show(
                         $"Your day will contain {p} proteins, {c} carbohydrates and {f} fats. Have a nice day!");
                 });
@@ -78,9 +89,12 @@ namespace NutrientsApp.WPF.UI.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ApplicationViewModel(IRecipesService recipesService)
+        public ApplicationViewModel(IRecipesService recipesService, IProductNutrientsService productNutrientsService, 
+            INutrientComponentsService nutrientComponentsService)
         {
             _recipesService = recipesService;
+            _productNutrientsService = productNutrientsService;
+            _nutrientComponentsService = nutrientComponentsService;
             AllRecipes = new ObservableCollection<Recipe>(_recipesService.GetAll());
             ChosenRecipes = new ObservableCollection<Recipe>();
         }

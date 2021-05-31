@@ -2,11 +2,9 @@ C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Services.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\ref\NutrientsApp.Services.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Services.pdb
-C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Data.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Domain.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Entities.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Mappers.dll
-C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Data.pdb
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Domain.pdb
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Entities.pdb
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Mappers.pdb
@@ -19,3 +17,10 @@ C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\obj\Debug\net5.0
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\obj\Debug\net5.0\NutrientsApp.Services.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\obj\Debug\net5.0\ref\NutrientsApp.Services.dll
 C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\obj\Debug\net5.0\NutrientsApp.Services.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Services.runtimeconfig.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Services.runtimeconfig.dev.json
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\obj\Debug\net5.0\NutrientsApp.Services.genruntimeconfig.cache
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Data.Abstract.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Data.ImplEf.dll
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Data.ImplEf.pdb
+C:\Users\ozonp\RiderProjects\NutrientsApp\NutrientsApp.Services\bin\Debug\net5.0\NutrientsApp.Data.Abstract.pdb

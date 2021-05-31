@@ -11,11 +11,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using NutrientsApp.Data;
-using NutrientsApp.Data.UnitOfWork;
-using NutrientsApp.Data.UnitOfWork.Abstract;
+using NutrientsApp.Data.Abstract.UnitOfWork;
+using NutrientsApp.Data.ImplOrmLite.UnitOfWork;
 using NutrientsApp.Services;
 using NutrientsApp.Services.Abstract;
 using NutrientsApp.WPF.UI.ViewModels;
+using ServiceStack.OrmLite;
 
 namespace NutrientsApp.WPF.UI
 {
@@ -48,13 +49,18 @@ namespace NutrientsApp.WPF.UI
         }
         private void ConfigureServices(IServiceCollection services)
         {
+            OrmLiteConnectionFactory connectionFactory = new OrmLiteConnectionFactory(Configuration.GetConnectionString("NutrientsDb"), SqlServer2019Dialect.Provider);
+            services.AddSingleton<OrmLiteConnectionFactory>(connectionFactory);
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<MainWindow>();
             services.AddTransient<IRecipesService, RecipesService>();
             services.AddTransient<IIngredientsService, IngredientService>();
             services.AddTransient<IProductsService, ProductsService>();
-            services.AddDbContext<NutrientsContext>(
-                options => options.UseSqlServer(Configuration.GetConnectionString("NutrientsDb")));
+            services.AddTransient<IProductNutrientsService, ProductNutrientsService>();
+            services.AddTransient<INutrientComponentsService, NutrientComponentsService>();
+            services.AddDbContext<MyContext>(
+                options => options.UseSqlServer(Configuration.GetConnectionString("NutrientsDb"),
+                    x => x.MigrationsAssembly("NutrientsApp.Data.ImplEf")));
             services.AddTransient<ApplicationViewModel>();
         }
     }

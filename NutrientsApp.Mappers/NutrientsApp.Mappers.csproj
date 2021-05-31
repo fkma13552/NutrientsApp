@@ -5,7 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\NutrientsApp.Data\NutrientsApp.Data.csproj" />
+      <ProjectReference Include="..\NutrientsApp.Data.ImplEf\NutrientsApp.Data.ImplEf.csproj" />
       <ProjectReference Include="..\NutrientsApp.Domain\NutrientsApp.Domain.csproj" />
       <ProjectReference Include="..\NutrientsApp.Entities\NutrientsApp.Entities.csproj" />
     </ItemGroup>

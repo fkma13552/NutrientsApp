@@ -8,6 +8,8 @@ namespace NutrientsApp.Domain
         public Guid ProductId { get; set; }
         public Guid RecipeId { get; set; }
         public int AmountInGrams { get; set; }
+        public Product Product { get; set; }
+        public Recipe Recipe { get; set; }
         
     }
 }

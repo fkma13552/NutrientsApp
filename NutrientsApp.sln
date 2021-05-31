@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp", "NutrientsAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.Entities", "NutrientsApp.Entities\NutrientsApp.Entities.csproj", "{CB23EBD1-ACBD-4B7B-87ED-C84F66E87609}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.Data", "NutrientsApp.Data\NutrientsApp.Data.csproj", "{8B38B493-BEB1-4017-9EC7-6A94E8947405}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.Data.ImplEf", "NutrientsApp.Data.ImplEf\NutrientsApp.Data.ImplEf.csproj", "{8B38B493-BEB1-4017-9EC7-6A94E8947405}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.Domain", "NutrientsApp.Domain\NutrientsApp.Domain.csproj", "{2768C8E0-1D51-45C3-A239-FEF193E92F64}"
 EndProject
@@ -13,6 +13,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.Services", "NutrientsApp.Services\NutrientsApp.Services.csproj", "{DD9A9F1C-3072-4D26-8BFA-860526115565}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.WPF.UI", "NutrientsApp.WPF.UI\NutrientsApp.WPF.UI.csproj", "{24D38EEA-A8EC-4F0C-A88C-F0AB7465082A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.Data.Abstract", "NutrientsApp.Data.Abstract\NutrientsApp.Data.Abstract.csproj", "{9E8C1265-1A66-41E8-8AAC-5D2D98215EEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.Data.ImplOrmLite", "NutrientsApp.Data.ImplOrmLite\NutrientsApp.Data.ImplOrmLite.csproj", "{9F857B47-FA90-423C-8BEF-E10F3879772E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,7 @@ Global
 		{F73CB088-A576-434D-A53F-9961505625B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F73CB088-A576-434D-A53F-9961505625B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F73CB088-A576-434D-A53F-9961505625B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F73CB088-A576-434D-A53F-9961505625B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB23EBD1-ACBD-4B7B-87ED-C84F66E87609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CB23EBD1-ACBD-4B7B-87ED-C84F66E87609}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB23EBD1-ACBD-4B7B-87ED-C84F66E87609}.Release|Any CPU.Build.0 = Release|Any CPU
@@ -47,5 +52,13 @@ Global
 		{24D38EEA-A8EC-4F0C-A88C-F0AB7465082A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24D38EEA-A8EC-4F0C-A88C-F0AB7465082A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24D38EEA-A8EC-4F0C-A88C-F0AB7465082A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E8C1265-1A66-41E8-8AAC-5D2D98215EEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E8C1265-1A66-41E8-8AAC-5D2D98215EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E8C1265-1A66-41E8-8AAC-5D2D98215EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E8C1265-1A66-41E8-8AAC-5D2D98215EEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F857B47-FA90-423C-8BEF-E10F3879772E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F857B47-FA90-423C-8BEF-E10F3879772E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F857B47-FA90-423C-8BEF-E10F3879772E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F857B47-FA90-423C-8BEF-E10F3879772E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

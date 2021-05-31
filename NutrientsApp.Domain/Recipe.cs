@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using NutrientsApp.Data;
-using NutrientsApp.Data.Repositories.Abstract;
 using NutrientsApp.Entities;
 
 namespace NutrientsApp.Domain

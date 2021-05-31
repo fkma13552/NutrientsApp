@@ -1,8 +1,7 @@
 ﻿using System;
+using NutrientsApp.Data.Abstract.UnitOfWork;
 using NutrientsApp.Domain;
 using NutrientsApp.Services.Abstract;
-using NutrientsApp.Data.Repositories.Abstract;
-using NutrientsApp.Data.UnitOfWork.Abstract;
 using NutrientsApp.Entities;
 using NutrientsApp.Mappers;
 

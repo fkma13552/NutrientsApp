@@ -77,6 +77,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "ServiceStack.OrmLite.SqlServer": {
+              "target": "Package",
+              "version": "[5.11.0, )"
             }
           },
           "imports": [

@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using NutrientsApp.Entities.Abstract;
+using ServiceStack.DataAnnotations;
 
 namespace NutrientsApp.Entities
 {
-    public class ProductEntity: IProductEntity
+    [Alias("Products")]
+    [Schema("dbo")]
+    public class ProductEntity: IBaseEntity
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public int Proteins { get; set; }
-        public int Fats { get; set; }
-        public int Carbohydrates { get; set; }
-        public int Vitamins { get; set; }
-        public int Minerals { get; set; }
-
     }
 }

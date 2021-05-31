@@ -11,10 +11,6 @@ namespace NutrientsApp.Services.Abstract
         Recipe GetRecipeById(Guid id);
         void DeleteRecipeById(Guid id);
         IList<Recipe> GetAll();
-        public int GetRecipeProteins(Recipe recipe);
-        public int GetRecipeCarbohydrates(Recipe recipe);
-        public int GetRecipeFats(Recipe recipe);
-        public int GetRecipeVitamins(Recipe recipe);
-        public int GetRecipeMinerals(Recipe recipe);
+        public IDictionary<string, int> GetRecipeNutrients(Recipe recipe);
     }
 }

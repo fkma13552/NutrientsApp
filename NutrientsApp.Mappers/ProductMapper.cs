@@ -10,12 +10,7 @@ namespace NutrientsApp.Mappers
             return new ProductEntity
             {
                 Id = product.Id,
-                Name = product.Name,
-                Proteins = product.Proteins,
-                Fats = product.Fats,
-                Carbohydrates = product.Carbohydrates,
-                Vitamins = product.Vitamins,
-                Minerals = product.Minerals,
+                Name = product.Name
             };
         }
 
@@ -24,12 +19,7 @@ namespace NutrientsApp.Mappers
             return new Product
             {
                 Id = productEntity.Id,
-                Name = productEntity.Name,
-                Proteins = productEntity.Proteins,
-                Fats = productEntity.Fats,
-                Carbohydrates = productEntity.Carbohydrates,
-                Vitamins = productEntity.Vitamins,
-                Minerals = productEntity.Minerals,
+                Name = productEntity.Name
             };
         }
     }

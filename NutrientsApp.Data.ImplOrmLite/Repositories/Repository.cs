@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 using NutrientsApp.Data.Abstract.Repositories;
 using NutrientsApp.Entities.Abstract;
 using ServiceStack.OrmLite;
-using ServiceStack.OrmLite.Dapper;
 
 namespace NutrientsApp.Data.ImplOrmLite.Repositories
 {
@@ -20,44 +18,44 @@ namespace NutrientsApp.Data.ImplOrmLite.Repositories
         }
 
 
-        public void Create(T entity)
+        public async Task Create(T entity)
         {
-            using (IDbConnection db = _factory.Open())
+            using (IDbConnection db = await _factory.OpenAsync())
             {
-                db.Insert(entity);
+                await db.InsertAsync(entity);
             }
         }
 
-        public void Update(T entity)
+        public async Task Update(T entity)
         {
-            using (IDbConnection db = _factory.Open())
+            using (IDbConnection db = await _factory.OpenAsync())
             {
-                db.Update(entity);
+                await db.UpdateAsync(entity);
             }
         }
         
 
-        public T GetById(Guid id)
+        public async Task<T> GetById(Guid id)
         {
-            using (IDbConnection db = _factory.Open())
+            using (IDbConnection db = await _factory.OpenAsync())
             {
-                return db.SingleById<T>(id);
+                return await db.SingleByIdAsync<T>(id);
             }
         }
 
-        public void DeleteById(Guid id)
+        public async Task DeleteById(Guid id)
         {
-            using (IDbConnection db = _factory.Open())
+            using (IDbConnection db = await _factory.OpenAsync())
             {
-                db.DeleteById<T>(id);
+               await db.DeleteByIdAsync<T>(id);
             }
         }
 
-        public IList<T> GetAll()
+        public async Task<IList<T>> GetAll()
         {
-            using (IDbConnection db = _factory.Open())
+            using (IDbConnection db = await _factory.OpenAsync())
             {
-                return db.Select(db.From<T>());
+                return await db.SelectAsync(db.From<T>());
             }
         }
     }

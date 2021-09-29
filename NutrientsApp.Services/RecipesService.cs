@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using NutrientsApp.Data.Abstract.UnitOfWork;
 using NutrientsApp.Domain;
 using NutrientsApp.Entities;
@@ -14,35 +15,36 @@ namespace NutrientsApp.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IProductNutrientsService _productNutrientsService;
         
-        public RecipesService(IUnitOfWork unitOfWork)
+        public RecipesService(IUnitOfWork unitOfWork, IProductNutrientsService productNutrientsService)
         {
             _unitOfWork = unitOfWork;
-            _productNutrientsService = new ProductNutrientsService(unitOfWork);
+            _productNutrientsService = productNutrientsService;
         }
 
-        public void AddRecipe(Recipe recipe)
+        public async Task AddRecipe(Recipe recipe)
         {
-            _unitOfWork.RecipesRepository.Create(recipe.ToEntity());
+            await _unitOfWork.RecipesRepository.Create(recipe.ToEntity());
         }
 
-        public void DeleteRecipeById(Guid id)
+        public async Task DeleteRecipeById(Guid id)
         {
-            _unitOfWork.RecipesRepository.DeleteById(id);
+            await _unitOfWork.RecipesRepository.DeleteById(id);
         }
 
-        public IList<Recipe> GetAll()
+        public async Task<IList<Recipe>> GetAll()
         {
-            return _unitOfWork.RecipesRepository.GetAll().Select(r => r.ToDomain()).ToList();
+            var list = await _unitOfWork.RecipesRepository.GetAll();
+               return list.Select(r => r.ToDomain()).ToList();
         }
 
-        public IDictionary<string, int> GetRecipeNutrients(Recipe recipe)
+        public async Task<IDictionary<string, int>> GetRecipeNutrients(Guid recipeId)
         {
-            IList<IngredientEntity> ingredients = _unitOfWork.IngredientsRepository.GetAllItemsFromRecipe(recipe.ToEntity());
+            IList<IngredientEntity> ingredients = await _unitOfWork.IngredientsRepository.GetAllItemsFromRecipe(recipeId);
             IDictionary<string, int> dictionaryToReturn = new Dictionary<string, int>();
             
             foreach (IngredientEntity ingredient in ingredients)
             {
-                IDictionary<string, int> nutrients = _productNutrientsService.GetProductNutrients(ingredient.ProductId);
+                IDictionary<string, int> nutrients = await _productNutrientsService.GetProductNutrients(ingredient.ProductId);
                 foreach (KeyValuePair<string,int> kv in nutrients)
                 {
                     if (dictionaryToReturn.ContainsKey(kv.Key))
@@ -60,14 +62,15 @@ namespace NutrientsApp.Services
             return dictionaryToReturn;
         }
 
-        public Recipe GetRecipeById(Guid id)
+        public async Task<Recipe> GetRecipeById(Guid id)
         {
-            return _unitOfWork.RecipesRepository.GetById(id).ToDomain();
+            var recipe = await _unitOfWork.RecipesRepository.GetById(id);
+            return recipe.ToDomain();
         }
 
-        public void UpdateRecipe(Recipe recipe)
+        public async Task UpdateRecipe(Recipe recipe)
         {
-            _unitOfWork.RecipesRepository.Update(recipe.ToEntity());
+            await _unitOfWork.RecipesRepository.Update(recipe.ToEntity());
         }
 
         

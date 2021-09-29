@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using NutrientsApp.Data.Abstract.UnitOfWork;
 using NutrientsApp.Domain;
 using NutrientsApp.Services.Abstract;
@@ -25,9 +26,10 @@ namespace NutrientsApp.Services
             _unitOfWork.ProductsRepository.DeleteById(id);
         }
 
-        public Product GetProductById(Guid id)
+        public async Task<Product> GetProductById(Guid id)
         {
-            return _unitOfWork.ProductsRepository.GetById(id).ToDomain();
+            var prod = await _unitOfWork.ProductsRepository.GetById(id);
+                return prod.ToDomain();
         }
 
         public void UpdateProduct(Product product)

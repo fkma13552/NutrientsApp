@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using NutrientsApp.Domain;
 
 namespace NutrientsApp.Services.Abstract
@@ -7,7 +8,7 @@ namespace NutrientsApp.Services.Abstract
     {
         void AddProduct(Product ingredient);
         void UpdateProduct(Product ingredient);
-        Product GetProductById(Guid id);
+        Task<Product> GetProductById(Guid id);
         void DeleteProductById(Guid id);
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 using NutrientsApp.Data.Abstract.Repositories;
 using NutrientsApp.Entities;
 using NutrientsApp.Entities.Abstract;
@@ -18,13 +19,14 @@ namespace NutrientsApp.Data.ImplOrmLite.Repositories
         }
 
 
-        public IList<IngredientEntity> GetAllItemsFromRecipe(RecipeEntity recipeEntity)
+        public async Task<IList<IngredientEntity>> GetAllItemsFromRecipe(Guid recipeId)
         {
             //SELECT * FROM Ingredients WHERE 
-            using (IDbConnection db = _factory.Open())
+            using (IDbConnection db = await _factory.OpenAsync())
             {
                 //return db.Select<IngredientEntity>("SELECT * FROM [Ingredients] WHERE RecipeId='{0}'", new {recipeEntity.Id});
-                var a = db.Select<IngredientEntity>(db.From<IngredientEntity>().Where((i => i.RecipeId == recipeEntity.Id)));
+                var a = await db.SelectAsync<IngredientEntity>(db.From<IngredientEntity>()
+                    .Where((i => i.RecipeId == recipeId)));
                 return a;
             }
         }

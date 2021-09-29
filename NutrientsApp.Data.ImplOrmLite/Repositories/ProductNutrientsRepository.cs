@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using NutrientsApp.Data.Abstract.Repositories;
 using NutrientsApp.Entities;
@@ -20,28 +21,23 @@ namespace NutrientsApp.Data.ImplOrmLite.Repositories
         }
 
 
-        public IDictionary<string, int> GetProductNutrients(Guid id)
+        public async Task<IDictionary<string, int>> GetProductNutrients(Guid id)
         {
             IDictionary<string, int> dictionaryToReturn = new Dictionary<string, int>();
             IList <(string, int)> prodNutrs = new List<(string, int)>();
-            using (IDbConnection db = _factory.Open())
+            using (IDbConnection db = await _factory.OpenAsync())
             {
                 var q = db.From<ProductNutrientEntity>()
                     .Join<ProductNutrientEntity, NutrientComponentEntity>((pn, n) => pn.NutrientId == n.Id)
                     .Where(p => p.ProductId == id)
                     .Select<ProductNutrientEntity, NutrientComponentEntity>((pn, n) => new {n.Name, pn.AmountPerHundred});
                 //prodNutrs = db.Query<(string, int)>("SELECT NutrientComponents.Name, ProductNutrients.AmountPerHundred FROM NutrientComponents WHERE ProductNutrients.ProductId = @id INNER JOIN ProductNutrients ON ProductNutrients.NutrientId=NutrientComponents.Id", new{id = id}).ToList();
-                prodNutrs = db.Select<(string, int)>(q);
+                prodNutrs = await db.SelectAsync<(string, int)>(q);
             }
 
             if (prodNutrs.Count > 0)
             {
-                foreach (var prodNutr in prodNutrs)
-                {
-                    string name = prodNutr.Item1;
-                    int amount = prodNutr.Item2;
-                    dictionaryToReturn.Add(name, amount);
-                }
+                dictionaryToReturn = prodNutrs.ToDictionary(k => k.Item1, v => v.Item2);
             }
 
             return dictionaryToReturn;

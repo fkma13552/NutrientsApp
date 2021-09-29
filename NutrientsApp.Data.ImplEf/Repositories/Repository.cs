@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using NutrientsApp.Data.Abstract.Repositories;
 using NutrientsApp.Entities.Abstract;
+using ServiceStack;
 
 namespace NutrientsApp.Data.ImplEf.Repositories
 {
@@ -19,36 +21,39 @@ namespace NutrientsApp.Data.ImplEf.Repositories
         }
 
 
-        public void Create(T entity)
+        public async Task Create(T entity)
         {
-            _dbSet.Add(entity);
+            await _dbSet.AddAsync(entity);
         }
 
-        public void Update(T entity)
+        public async Task Update(T entity)
         {
             _dbSet.Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
         }
 
-        public T GetById(Guid id)
+        public async Task<T> GetById(Guid id)
         {
-            return _dbSet.Find(id);
+            return await _dbSet.FindAsync(id);
         }
 
-        public void DeleteById(Guid id)
+        public async Task DeleteById(Guid id)
         {
-            T entityToDelete = _dbSet.Find(id);
+            T entityToDelete = await _dbSet.FindAsync(id);
             if (_context.Entry(entityToDelete).State == EntityState.Detached)
             {
                 _dbSet.Attach(entityToDelete);
             }
 
             _dbSet.Remove(entityToDelete);
+
+            await _context.SaveChangesAsync();
         }
 
-        public IList<T> GetAll()
+        public async Task<IList<T>> GetAll()
         {
-            return _dbSet.ToList();
+            return await _dbSet.ToListAsync();
         }
     }
 }

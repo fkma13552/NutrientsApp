@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using NutrientsApp.Data.Abstract.Repositories;
 using NutrientsApp.Entities;
 using NutrientsApp.Entities.Abstract;
@@ -15,9 +17,9 @@ namespace NutrientsApp.Data.ImplEf.Repositories
             _context = context;
         }
 
-        public IList<IngredientEntity> GetAllItemsFromRecipe(RecipeEntity recipeEntity)
+        public async Task<IList<IngredientEntity>> GetAllItemsFromRecipe(Guid recipeId)
         {
-            return _context.Ingredients.Where(ing => ing.RecipeId == recipeEntity.Id).ToList();
+            return await _context.Ingredients.Where(ing => ing.RecipeId == recipeId).ToListAsync();
         }
     }
 }

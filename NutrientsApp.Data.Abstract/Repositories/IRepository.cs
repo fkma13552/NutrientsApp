@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using NutrientsApp.Entities.Abstract;
 
 namespace NutrientsApp.Data.Abstract.Repositories
 {
     public interface IRepository<T> where T: IBaseEntity
     {
-        void Create(T entity);
-        void Update(T entity);
+        Task Create(T entity);
+        Task Update(T entity);
 
-        T GetById(Guid id);
+        Task<T> GetById(Guid id);
 
-        void DeleteById(Guid id);
+        Task DeleteById(Guid id);
 
-        IList<T> GetAll();
+        Task<IList<T>> GetAll();
     }
 }

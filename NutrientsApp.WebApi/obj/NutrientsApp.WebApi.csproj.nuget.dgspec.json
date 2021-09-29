@@ -1,0 +1,644 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.WebApi\\NutrientsApp.WebApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.Abstract\\NutrientsApp.Data.Abstract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.Abstract\\NutrientsApp.Data.Abstract.csproj",
+        "projectName": "NutrientsApp.Data.Abstract",
+        "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.Abstract\\NutrientsApp.Data.Abstract.csproj",
+        "packagesPath": "C:\\Users\\ozonp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.Abstract\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ozonp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.ImplEf\\NutrientsApp.Data.ImplEf.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.ImplEf\\NutrientsApp.Data.ImplEf.csproj",
+        "projectName": "NutrientsApp.Data.ImplEf",
+        "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.ImplEf\\NutrientsApp.Data.ImplEf.csproj",
+        "packagesPath": "C:\\Users\\ozonp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.ImplEf\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ozonp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.Abstract\\NutrientsApp.Data.Abstract.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.Abstract\\NutrientsApp.Data.Abstract.csproj"
+              },
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[2.0.0-preview1-final, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj",
+        "projectName": "NutrientsApp.Domain",
+        "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj",
+        "packagesPath": "C:\\Users\\ozonp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ozonp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.ImplEf\\NutrientsApp.Data.ImplEf.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.ImplEf\\NutrientsApp.Data.ImplEf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[2.0.0-preview1-final, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj",
+        "projectName": "NutrientsApp.Entities",
+        "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj",
+        "packagesPath": "C:\\Users\\ozonp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ozonp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[2.0.0-preview1-final, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "ServiceStack.OrmLite.SqlServer": {
+              "target": "Package",
+              "version": "[5.11.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Mappers\\NutrientsApp.Mappers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Mappers\\NutrientsApp.Mappers.csproj",
+        "projectName": "NutrientsApp.Mappers",
+        "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Mappers\\NutrientsApp.Mappers.csproj",
+        "packagesPath": "C:\\Users\\ozonp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Mappers\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ozonp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.ImplEf\\NutrientsApp.Data.ImplEf.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.ImplEf\\NutrientsApp.Data.ImplEf.csproj"
+              },
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj"
+              },
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[2.0.0-preview1-final, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Services\\NutrientsApp.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Services\\NutrientsApp.Services.csproj",
+        "projectName": "NutrientsApp.Services",
+        "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Services\\NutrientsApp.Services.csproj",
+        "packagesPath": "C:\\Users\\ozonp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ozonp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.ImplEf\\NutrientsApp.Data.ImplEf.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Data.ImplEf\\NutrientsApp.Data.ImplEf.csproj"
+              },
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj"
+              },
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Entities\\NutrientsApp.Entities.csproj"
+              },
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Mappers\\NutrientsApp.Mappers.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Mappers\\NutrientsApp.Mappers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[2.0.0-preview1-final, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.WebApi\\NutrientsApp.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.WebApi\\NutrientsApp.WebApi.csproj",
+        "projectName": "NutrientsApp.WebApi",
+        "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.WebApi\\NutrientsApp.WebApi.csproj",
+        "packagesPath": "C:\\Users\\ozonp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ozonp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Domain\\NutrientsApp.Domain.csproj"
+              },
+              "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Services\\NutrientsApp.Services.csproj": {
+                "projectPath": "C:\\Users\\ozonp\\RiderProjects\\NutrientsApp\\NutrientsApp.Services\\NutrientsApp.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

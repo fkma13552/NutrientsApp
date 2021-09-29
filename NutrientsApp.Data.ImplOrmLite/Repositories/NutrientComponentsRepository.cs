@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 using NutrientsApp.Data.Abstract.Repositories;
 using NutrientsApp.Entities;
 using ServiceStack.OrmLite;
@@ -17,11 +18,11 @@ namespace NutrientsApp.Data.ImplOrmLite.Repositories
         }
 
 
-        public IList<string> GetAllComponentsNames()
+        public async Task<IList<string>> GetAllComponentsNames()
         {
-            using (IDbConnection db = _factory.Open())
+            using (IDbConnection db = await _factory.OpenAsync())
             {
-                return db.Select<string>("SELECT Name FROM NutrientComponents");
+                return await db.SelectAsync<string>("SELECT Name FROM NutrientComponents");
             }
         }
     }

@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 using NutrientsApp.Domain;
 
 namespace NutrientsApp.Services.Abstract
 {
     public interface INutrientComponentsService
     {
-        public NutrientComponent GetNutrientById(Guid id);
+        public Task<NutrientComponent> GetNutrientById(Guid id);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using NutrientsApp.Data.Abstract.UnitOfWork;
 using NutrientsApp.Domain;
 using NutrientsApp.Services.Abstract;
@@ -17,24 +18,25 @@ namespace NutrientsApp.Services{
         {
             _unitOfWork = unitOfWork;
         }
-        public void AddIngredient(Ingredient ingredient)
+        public async Task AddIngredient(Ingredient ingredient)
         {
-            _unitOfWork.IngredientsRepository.Create(ingredient.ToEntity());
+            await _unitOfWork.IngredientsRepository.Create(ingredient.ToEntity());
         }
 
-        public void DeleteIngredientById(Guid id)
+        public async Task DeleteIngredientById(Guid id)
         {
-            _unitOfWork.IngredientsRepository.DeleteById(id);
+            await _unitOfWork.IngredientsRepository.DeleteById(id);
         }
 
-        public Ingredient GetIngredientById(Guid id)
+        public async Task<Ingredient> GetIngredientById(Guid id)
         {
-            return _unitOfWork.IngredientsRepository.GetById(id).ToDomain();
+            var ingr = await _unitOfWork.IngredientsRepository.GetById(id);
+            return ingr.ToDomain();
         }
 
-        public void UpdateIngredient(Ingredient ingredient)
+        public async Task UpdateIngredient(Ingredient ingredient)
         {
-            _unitOfWork.IngredientsRepository.Update(ingredient.ToEntity());
+            await _unitOfWork.IngredientsRepository.Update(ingredient.ToEntity());
         }
     }
 }

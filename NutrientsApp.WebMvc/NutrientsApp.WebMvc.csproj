@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>aspnet-NutrientsApp.WebMvc-2740CEE2-834D-4C03-936A-6757666E2725</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.3" />
+    </ItemGroup>
+
+</Project>

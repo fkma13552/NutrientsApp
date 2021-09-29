@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using NutrientsApp.Data.Abstract.UnitOfWork;
 using NutrientsApp.Domain;
 using NutrientsApp.Entities;
@@ -15,11 +16,11 @@ namespace NutrientsApp.Services
         {
             _unitOfWork = unitOfWork;
         }
-        public IDictionary<string, int> GetProductNutrients(Guid id)
+        public async Task<IDictionary<string, int>> GetProductNutrients(Guid id)
         {
-            IDictionary<string, int> dictionaryToReturn =
-                _unitOfWork.ProductNutrientsRepository.GetProductNutrients(id);
-            foreach (string nutrient in _unitOfWork.NutrientComponentsRepository.GetAllComponentsNames())
+            IDictionary<string, int> dictionaryToReturn = 
+                await _unitOfWork.ProductNutrientsRepository.GetProductNutrients(id);
+            foreach (string nutrient in await _unitOfWork.NutrientComponentsRepository.GetAllComponentsNames())
             {
                 if (!dictionaryToReturn.ContainsKey(nutrient))
                 {

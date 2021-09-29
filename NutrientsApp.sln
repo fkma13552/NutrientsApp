@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.Data.Abstract"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.Data.ImplOrmLite", "NutrientsApp.Data.ImplOrmLite\NutrientsApp.Data.ImplOrmLite.csproj", "{9F857B47-FA90-423C-8BEF-E10F3879772E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.WebApi", "NutrientsApp.WebApi\NutrientsApp.WebApi.csproj", "{9994CF83-A65C-4A12-A7DB-814C94E344D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutrientsApp.UnitTests", "NutrientsApp.UnitTests\NutrientsApp.UnitTests.csproj", "{6257AC04-7538-4037-A91C-85AA30AE5E77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +64,13 @@ Global
 		{9F857B47-FA90-423C-8BEF-E10F3879772E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F857B47-FA90-423C-8BEF-E10F3879772E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F857B47-FA90-423C-8BEF-E10F3879772E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9994CF83-A65C-4A12-A7DB-814C94E344D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9994CF83-A65C-4A12-A7DB-814C94E344D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9994CF83-A65C-4A12-A7DB-814C94E344D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9994CF83-A65C-4A12-A7DB-814C94E344D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6257AC04-7538-4037-A91C-85AA30AE5E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6257AC04-7538-4037-A91C-85AA30AE5E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6257AC04-7538-4037-A91C-85AA30AE5E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6257AC04-7538-4037-A91C-85AA30AE5E77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

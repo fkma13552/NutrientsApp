@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using NutrientsApp.Data.Abstract.UnitOfWork;
 using NutrientsApp.Domain;
 using NutrientsApp.Mappers;
@@ -15,9 +16,10 @@ namespace NutrientsApp.Services
         {
             _unitOfWork = unitOfWork;
         }
-        public NutrientComponent GetNutrientById(Guid id)
+        public async Task<NutrientComponent> GetNutrientById(Guid id)
         {
-            return _unitOfWork.NutrientComponentsRepository.GetById(id).ToDomain();
+            var nutr = await _unitOfWork.NutrientComponentsRepository.GetById(id);
+            return nutr.ToDomain();
         }
     }
 }

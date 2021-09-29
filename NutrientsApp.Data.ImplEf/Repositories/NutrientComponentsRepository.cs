@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using NutrientsApp.Data.Abstract.Repositories;
 using NutrientsApp.Entities;
 
@@ -14,9 +16,9 @@ namespace NutrientsApp.Data.ImplEf.Repositories
             _context = context;
         }
 
-        public IList<string> GetAllComponentsNames()
+        public async Task<IList<string>> GetAllComponentsNames()
         {
-            return _context.NutrientComponents.Select(c => c.Name).ToList();
+            return await _context.NutrientComponents.Select(c => c.Name).ToListAsync();
         }
     }
 }
